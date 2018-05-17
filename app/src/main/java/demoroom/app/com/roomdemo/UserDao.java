@@ -1,5 +1,6 @@
 package demoroom.app.com.roomdemo;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -7,14 +8,10 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-/**
- * Created by Milan on 13-May-18.
- */
-
 @Dao
 public interface UserDao {
     @Query("select * from USER")
-    List<User> getAll();
+    LiveData<List<User>> getAll();
 
     @Query("SELECT * FROM user where first_name LIKE  :firstName AND last_name LIKE :lastName")
     User findByName(String firstName, String lastName);

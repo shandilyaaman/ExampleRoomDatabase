@@ -4,10 +4,6 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-/**
- * Created by Milan on 13-May-18.
- */
-
 @Entity
 public class User {
     @PrimaryKey(autoGenerate = true)

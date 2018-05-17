@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Milan on 13-May-18.
- */
-
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder> {
     private List<User> userList;
     private Context context;
